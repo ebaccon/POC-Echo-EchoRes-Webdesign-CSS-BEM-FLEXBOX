@@ -1,9 +1,17 @@
+/******************************************************************************************************/
+/********************************************* GENERAL ************************************************/
+/******************************************************************************************************/
+
 html body {
     width: 100%;
 	margin: 0;
 	padding: 0;
 	background-color: #f5f5f5;
 }
+
+/******************************************************************************************************/
+/********************************************* HEADER *************************************************/
+/******************************************************************************************************/
 
 header {
 	display: flex;
@@ -49,7 +57,10 @@ header {
 	flex-wrap: nowrap;
 }
 
-/********** BODY **********/
+/******************************************************************************************************/
+/************************************************ BODY ************************************************/
+/******************************************************************************************************/
+
 body > section {
 	width: 94%;
 	margin: auto;
@@ -57,7 +68,7 @@ body > section {
 
 .section-title {
 	display: flex;
-	justify-content: center;
+	justify-content: left;
 }
 
 h1 {
@@ -68,13 +79,14 @@ h1 {
     border-bottom: 3px solid #1976D2;
 }
 
-/* AUTOGRID */
+/*******************************/
+/********** AUTOGRID ***********/
 
 .autogrid {
     display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-    padding: 9px;
+    padding: 0px;
 }
 
 .autogrid > * {
@@ -83,7 +95,9 @@ h1 {
 	margin: 1%;
 }
 
-/* CONTACT */
+/*******************************/
+/*********** CONTACT ***********/
+
 .contact {
 	height: inherit;
     display: flex;
@@ -123,7 +137,7 @@ h1 {
     height: auto;
 }
 
-.contact__activite img {
+.contact__activity img {
     width: 40px;
 }
 
@@ -144,7 +158,10 @@ h1 {
     padding-right: 9px;
 }
 
-/********** FOOTER **********/
+/******************************************************************************************************/
+/********************************************** FOOTER ************************************************/
+/******************************************************************************************************/
+
 footer {
 	width: 100%;
 	height: 40px;
@@ -158,102 +175,3 @@ footer p {
 	font-family: Rokkitt;
 	padding: 0.7rem 0rem;
 }
-
-/*h3 {
-    margin: 0;
-}
-
-.flex-container--row {
-    display: flex;
-    flex-direction: row;
-    border: 1px solid blue;
-    align-content: space-between;
-    justify-content: center;
-    align-items: flex-end;
-    flex-wrap: wrap;
-}
-
-.flex-container--column {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid blue;
-    align-content: center;
-    justify-content: center;
-    align-items: flex-end;
-    flex-wrap: wrap;
-}
-
-.flex-container__item {
-    flex-basis: 25%;
-    min-height: 50px;
-    width: 25%;
-    align-self: center;
-}
-
-.flex-container__item--red {
-    background-color: #ff5959;
-}
-.flex-container__item--green {
-    background-color: #87e27b;
-}
-.flex-container__item--blue {
-    background-color: #7ca6ea;
-}
-.flex-container__item--grey {
-    background-color: #eaeaea;
-}
-.flex-container__item--pink {
-    background-color: #ff8ee1;
-}
-.flex-container__item--orange {
-    background-color: #f4ca7a;
-}
-
-.media {
-    display: flex;
-    align-items: flex-start;
-    background-color: aliceblue;
-}
-
-.media__body {
-    flex: 1;
-    padding: 9px;
-}
-
-.media--reverse {
-    flex-direction: row-reverse;
-}
-
-.media__figure {
-    max-width: 80px;
-    max-height: 80px;
-    padding: 9px;
-}
-
-.media__figure--center {
-    align-self: center;
-}
-
-.media__figure img {
-    width: 100%;
-    height: auto;
-}
-
-.autogrid {
-    display: flex;
-    padding: 9px;
-}
-
-.autogrid > * {
-    flex: 1;
-    background-color: aliceblue;
-}
-
-.autogrid--gutter > *:not(:first-child) {
-    margin-left: 1rem;
-}
-
-.autogrid__item--big {
-    flex:2;
-}
-*/
