@@ -13,22 +13,47 @@ html body {
 /********************************************* HEADER *************************************************/
 /******************************************************************************************************/
 
-header {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	
+/*******************************/
+/************ HEADER ***********/
+
+.header-container {
+    /* FLEXBOX */
+	display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+	/* OTHER */
 	width: 100%;
 	height: 70px;
 	background-color: #1976D2;
 }
 
-.header-item {
-	flex-basis: auto;
-}
-
 .header-item__logo {
+    /* FLEXBOX */
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    /* OTHER */
 	height: inherit;
 }
 
@@ -37,28 +62,96 @@ header {
 }
 
 .header-item__name {
-	display: flex;
-	height: auto;
-	padding: 1.25rem 0.5rem;
-	flex-direction: row;
+    /* FLEXBOX */
+	-webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    /* OTHER */
+    height: inherit;
+    padding-top: 30px;
+    padding-left: 18px;
 	font-size: 2em;
 	font-family: Rokkitt;
-	color: #ffffff;
+    color: #ffffff;
 }
 
 .header-item__nav {
-	height: auto;
-	border: 1px solid red;
+    /* FLEXBOX */
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    /* OTHER */
+	height: inherit;
 }
 
-.header-item__nav > nav {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
+/*******************************/
+/************ NAVBAR ***********/
+
+.navbar-container {
+   /* FLEXBOX */
+	display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* OTHER */
+    padding-right: 9px;
+    padding-left: 9px;
 }
 
-.nav-item {
+.navbar-item {
+    /* FLEXBOX */
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    /* OTHER */
+    height: inherit;
+    padding-top: 20px;
+    font-size: 1.3em;
+	font-family: Rokkitt;
+    color: #ffffff;
+    padding-right: 9px;
+}
 
+.navbar-item__link {
+    color: #ffffff;
+    text-decoration: none; /* no underline */
+}
+
+.navbar-item__link:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 /******************************************************************************************************/
@@ -80,88 +173,190 @@ h1 {
 	font-family: Rokkitt;
 	font-size: 2.5em;
 	color: #1976D2;
-    border-bottom: 3px solid #1976D2;
 }
 
 /*******************************/
 /********** AUTOGRID ***********/
 
-.autogrid {
+.autogrid-container {
+    /* FLEXBOX */
+	display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* OTHER */
     padding: 0px;
 }
 
-.autogrid > * {
+.autogrid-item {
+    /* FLEXBOX */
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 23%;
+    -ms-flex: 0 1 23%;
+    flex: 0 1 23%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    /* OTHER */
 	height: auto;
-    flex-basis: 23%;
 	margin: 1%;
 }
 
 /*******************************/
 /*********** CONTACT ***********/
 
-.contact {
-	height: inherit;
+.contact-container {
+    /* FLEXBOX */
+	display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
-    align-items: flex-start;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* OTHER */
+	height: inherit;
     background-color: #ffffff;
     border: 1px solid #e5e6e9;
-    transition: transform .2s; 
+    transition: transform .2s, box-shadow .2s;
 }
 
-.contact:hover {
+.contact-container:hover {
     cursor: pointer;
+    -webkit-box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.75);
     transform: scale(1.05);
 }
 
-.contact__body {
-    flex: 1;
+.contact-item__body {
+    /* FLEXBOX */
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    /* OTHER */
     padding: 9px;
+    min-width: 176px;
 }
 
-.contact__body h3 {
+.contact-item__body h3 {
     margin: 0;
     padding: 0 0 0.5em 0;
     font-family: Rokkitt;
 	font-size: 1.5em;
 }
 
-.contact__figure {
+.contact-item__figure {
+    /* FLEXBOX */
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: flex-start;
+    align-self: flex-start;
+    /* OTHER */
 	height: 80px;
     width: 80px;
     padding: 9px;
 }
 
-.contact__figure--center {
+.contact-item__figure--center {
     align-self: center;
 }
 
-.contact__figure img {
+.contact-item__figure img {
     width: 100%;
     height: auto;
 }
 
-.contact__activity img {
+.info-activity img {
     width: 40px;
 }
 
-.info-contact {
+.info-contact-container {
+    /* FLEXBOX */
+	display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    /* OTHER */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-.info-contact__item {
+.info-contact-item {
+    /* FLEXBOX */
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    /* OTHER */
+    width: auto;
     font-size: 1.1em;
 	font-family: Rokkitt;
 }
 
-.info-contact__item img{
+.info-contact-item img{
     width: 32px;
     float: left;
     padding-right: 9px;
+    padding-top: 9px;
 }
 
 /******************************************************************************************************/
