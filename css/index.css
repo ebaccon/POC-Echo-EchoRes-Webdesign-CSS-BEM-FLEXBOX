@@ -24,19 +24,19 @@ header {
 	background-color: #1976D2;
 }
 
-.header__item {
+.header-item {
 	flex-basis: auto;
 }
 
-.header__item__logo {
+.header-item__logo {
 	height: inherit;
 }
 
-.header__item__logo img {
+.header-item__logo img {
 	height: inherit;
 }
 
-.header__item__name {
+.header-item__name {
 	display: flex;
 	height: auto;
 	padding: 1.25rem 0.5rem;
@@ -46,15 +46,19 @@ header {
 	color: #ffffff;
 }
 
-.header__item__nav {
+.header-item__nav {
 	height: auto;
 	border: 1px solid red;
 }
 
-.header__item__nav > nav {
+.header-item__nav > nav {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
+}
+
+.nav-item {
+
 }
 
 /******************************************************************************************************/
@@ -103,7 +107,13 @@ h1 {
     display: flex;
     align-items: flex-start;
     background-color: #ffffff;
-	border: 1px solid #e5e6e9;
+    border: 1px solid #e5e6e9;
+    transition: transform .2s; 
+}
+
+.contact:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 .contact__body {
@@ -116,10 +126,6 @@ h1 {
     padding: 0 0 0.5em 0;
     font-family: Rokkitt;
 	font-size: 1.5em;
-}
-
-.contact--reverse {
-    flex-direction: row-reverse;
 }
 
 .contact__figure {
@@ -169,7 +175,7 @@ footer {
 	text-align: center;
 }
 
-footer p {
+.footer-text {
 	font-size: 1.1em;
 	color: #ffffff;
 	font-family: Rokkitt;
