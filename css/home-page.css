@@ -60,11 +60,3 @@
 	height: auto;
 	margin: 1%;
 }
-
-/*******************************/
-/*********** CONTACT ***********/
-
-.contact-link {
-    color: inherit;
-    text-decoration: none; /* no underline */
-}
