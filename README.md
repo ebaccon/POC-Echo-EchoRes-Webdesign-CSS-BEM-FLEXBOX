@@ -17,7 +17,7 @@ It's just my simple application for testing basing code of :
 
 ## This project 
 
-Just implment HCI (Human-computer interaction) for Echo'Res project with :
+Just implement HCI (Human-computer interaction) for Echo'Res project with :
 * CSS
 * BEM pattern
 * Flexbox

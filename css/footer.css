@@ -16,3 +16,8 @@ footer {
 	font-family: Rokkitt;
 	padding: 0.7rem 0rem;
 }
+
+.footer-text_link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
