@@ -31,7 +31,6 @@ body > section {
 
 .h1 {
     width: auto;
-	font-family: Rokkitt;
 	font-size: 2.5em;
 	color: #1976D2;
 }
@@ -42,7 +41,6 @@ body > section {
 
 .h2 {
     width: auto;
-	font-family: Rokkitt;
 	font-size: 2em;
     color: #1976D2;
     margin: 0;
@@ -55,6 +53,12 @@ body > section {
 a {
     color: inherit;
     text-decoration: none; /* no underline */
+}
+
+input {
+    border-style: none;
+    border-color: none;
+    border-image: none;
 }
 
 .label-form {
@@ -71,16 +75,39 @@ a {
 }
 
 .button-validate {
-    width: min-content;
+    width: max-content;
     background-color: #1976D2;
     color: #ffffff;
     font-size: 1.2em;
     padding: 9px;
     cursor: pointer;
+    display: inline-block;
     transition: transform .2s, box-shadow .2s;
 }
 
-.button-validate--hover:hover {
+.button-neutral {
+    width: max-content;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 1.2em;
+    padding: 9px;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.button-error {
+    width: max-content;
+    background-color: #D32F2F;
+    color: #ffffff;
+    font-size: 1.2em;
+    padding: 9px;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.button-validate--hover:hover, .button-neutral--hover:hover, .button-error--hover:hover {
     transform: scale(1.05);
     -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
@@ -317,4 +344,139 @@ a {
     margin: 0;
     padding-top: 9px;
     padding-bottom: 9px;
+}
+
+/*******************************/
+/***** INPUT AUTOCOMPLETE ******/
+
+.autocomplete {
+    /*the container must be positioned relative:*/
+    position: relative;
+    display: inline-block;
+    width: 200px;
+}
+
+.input-autocomplete {
+    width: auto;
+    border: 1px solid transparent;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.input-autocomplete[type=text] {
+    background-color: #f1f1f1;
+    width: 100%;
+}
+
+.input-autocomplete-submit {
+    margin-left: 20px;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    border-top: none;
+    z-index: 99;
+    /*position the autocomplete items to be the same width as the container:*/
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff; 
+    border-bottom: 1px solid #d4d4d4; 
+}
+
+.autocomplete-items div:hover {
+    /*when hovering an item:*/
+    background-color: #e9e9e9; 
+}
+
+.autocomplete-active {
+    /*when navigating through the items using the arrow keys:*/
+    background-color: DodgerBlue !important; 
+    color: #ffffff; 
+}
+
+/*******************************/
+/********** SNACKBAR ***********/
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#js-snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    font-size: 1.2em;
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+    -webkit-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#js-snackbar.show {
+    visibility: visible; /* Show the snackbar */
+
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, pulsein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, pulsein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#js-snackbar.success {
+    background-color: #388E3C;
+}
+
+#js-snackbar.error {
+    background-color: #C62828;
+}
+
+#js-snackbar.warning {
+    background-color: #E64A19;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes pulsein {
+    0% {transform: scale(1.0);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1.0);}
+}
+
+@keyframes pulsein {
+    0% {transform: scale(1.0);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1.0);}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
 }

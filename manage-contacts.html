@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="css/header.css">
-    <link rel="stylesheet" type="text/css" href="css/home-page.css">
+    <link rel="stylesheet" type="text/css" href="css/manage-contacts.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
 	<link href="https://fonts.googleapis.com/css?family=Rokkitt" rel="stylesheet">
 </head>
@@ -38,11 +38,88 @@
 		<div class="section-title">
 			<h1 class="h1">Manage Contacts</h1>
 		</div>
-		
+		<div class="manage-wrapper">
+			<div class="manage-actions">
+				<!--Make sure the form has the autocomplete function switched off:-->
+				<form autocomplete="off" action="#">
+					<div class="autocomplete">
+						<input id="newContact" class="input-autocomplete" type="text" name="myContact" placeholder="Contact">
+					</div>
+					<input class="input-autocomplete-submit button-validate button-validate--hover" 
+						type="submit" 
+						value="Add Contact"
+						onclick="openSnackbar('success', 'Add contact successful!')">
+				</form>
+			</div>
+			<div class="manage-table-wrapper">
+				<table class="manage-table">
+					<tr>
+						<th>Login</th>
+						<th>Phone number</th>
+						<th>Adress</th>
+						<th>Interest</th>
+						<th>Actions</th>
+					</tr>
+					<tr>
+						<td>Lycia</td>
+						<td>02.02.02.02.02</td>
+						<td>1 Crazy Road 44300 Nantes</td>
+						<td>What does the fox say?</td>
+						<td class="manage-table-actions">
+							<div class="button-error button-error--hover" 
+								onclick="openSnackbar('success', 'Remove contact successful!')">
+								Remove
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>Lywan</td>
+						<td>03.03.03.03.03</td>
+						<td>1 Unicorn Road 44300 Nantes</td>
+						<td>Boots and cats !</td>
+						<td class="manage-table-actions">
+							<div class="button-error button-error--hover" 
+								onclick="openSnackbar('warning', 'Remove contact warning!')">
+								Remove
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>Elendil</td>
+						<td>04.04.04.04.04</td>
+						<td>1 Elvish Road 44300 Nantes</td>
+						<td>Yatta Song</td>
+						<td class="manage-table-actions">
+							<div class="button-error button-error--hover" 
+								onclick="openSnackbar('error', 'Remove contact error!')">
+								Remove
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>Terendul</td>
+						<td>05.05.05.05.05</td>
+						<td>1 Elvish Road 44300 Nantes</td>
+						<td>Crazy Horse (God! No!)</td>
+						<td class="manage-table-actions">
+							<div class="button-error button-error--hover" 
+								onclick="openSnackbar('success', 'Remove contact successful!')">
+								Remove
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div id="js-snackbar">Put a text here</div>
 	</section>
 	<footer>
 		<p class="footer-text">
 			©Echo'Res. All rights reserved. Developped by <a class="footer-text_link" href="https://github.com/ebaccon">Echo</a>
 		</p>
 	</footer>
+
+	<!-- SCRIPT JAVASCRIPT -->
+	<script src="js/autocomplete.js"></script>
+	<script src="js/snackbar.js"></script>
 </body>
